@@ -22,7 +22,7 @@ class Memo < Post
     
         # Сперва запишем в блокнот дату и время записи и сделаем отступ
         # \r – специальный дополнительный символ конца строки для Windows
-        time_string = @created_at.strftime("%Y.%m.%d, %H:%M")
+        time_string = "Создано: " + @created_at.strftime("%Y.%m.%d, %H:%M")
         file.puts(time_string + "\n\r")
     
         # Затем в цикле запишем в файл строчку за строчкой массив @text

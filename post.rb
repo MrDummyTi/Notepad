@@ -4,7 +4,7 @@ class Post                          #родительский класс
         @text = [ ]                 # массив строк записи 
     end
 
-    def self.post_types
+    def self.post_types             # статический метод 
         [Memo, Task, Link]
     end
 
@@ -12,11 +12,11 @@ class Post                          #родительский класс
         return post_types[type_index].new
     end
     
-    def read_from_console
+    def read_from_console       # Абстракктный метод 
         #todo
     end
 
-    def to_strings
+    def to_strings               # Абстракктный метод 
         #todo
     end
 

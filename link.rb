@@ -14,7 +14,7 @@ class Link < Post
 
     def save
         file = File.new(file_path, "w:UTF-8")
-        time_string = @created_at.strftime("%Y.%m.%d, %H:%M")
+        time_string = "Создано: " + @created_at.strftime("%Y.%m.%d, %H:%M")
         file.puts(time_string + "\n\r")
 
         # Помимо текста мы ещё сохраняем в файл адрес ссылки
